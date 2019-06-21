@@ -597,7 +597,7 @@ export class SubscriptionClient {
       [ MessageTypes.GQL_DATA,
         MessageTypes.GQL_COMPLETE,
         MessageTypes.GQL_ERROR,
-      ].indexOf(parsedMessage.type) !== -1 && !this.operations[opId]
+      ].indexOf(parsedMessage.type) !== -1 && this.operations[opId]
     ) {
       this.unsubscribe(opId);
 
